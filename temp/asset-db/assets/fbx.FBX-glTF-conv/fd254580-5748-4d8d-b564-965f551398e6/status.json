@@ -1,0 +1,21 @@
+{
+  "version": "2.3.14",
+  "sourceTimeStamp": 1788076870061.3462,
+  "outputTimeStamps": {
+    "car_ford_mustang_mach_e1400_df_Out.png": 1788077064246.4016,
+    "car_ford_mustang_mach_e1400_occ_Out.png": 1788077064245.403,
+    "car_ford_mustang_mach_e1400_glows_Out.png": 1788077064248.4033,
+    "car_tyres_new_occ_Out.png": 1788077064249.402,
+    "log.json": 1788077064337.9402,
+    "out.bin": 1788077064332.942,
+    "out.gltf": 1788077064336.9382,
+    ".fbm/C3F81AF6/e1499.fbm/car_ford_mustang_mach_e1400_glows_Out.png": 1788077064248.4033,
+    ".fbm/C3F81AF6/e1499.fbm/car_ford_mustang_mach_e1400_df_Out.png": 1788077064246.4016,
+    ".fbm/C3F81AF6/e1499.fbm/car_tyres_new_occ_Out.png": 1788077064249.402,
+    ".fbm/C3F81AF6/e1499.fbm/car_ford_mustang_mach_e1400_occ_Out.png": 1788077064245.403
+  },
+  "options": {
+    "smartMaterialEnabled": true,
+    "matchMeshNames": true
+  }
+}
