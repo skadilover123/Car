@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Input, input, KeyCode, Collider, Label, director, AudioSource } from 'cc';
+import { _decorator, EventKeyboard, ITriggerEvent, Component, Node, Input, input, KeyCode, Collider, Label, director, AudioSource } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('Car')
@@ -33,29 +33,29 @@ export class Car extends Component {
 
     }
 
-    Start_Collider(C) {
+    Start_Collider(event: ITriggerEvent) {
         this.Move = false
         this.TextBox.active = true
         this.Sound.stop()
-        if (C.otherCollider.node.name == "wall") {
+        if (event.otherCollider.node.name == "wall") {
             this.UILabel.string = "成功了"
         } else {
             this.UILabel.string = "失败了"
         }
     }
 
-    Key_Down(key) {
-        if (key.keyCode == KeyCode.KEY_A || key.keyCode == KeyCode.ARROW_LEFT) {
+    Key_Down(event: EventKeyboard) {
+        if (event.keyCode == KeyCode.KEY_A || event.keyCode == KeyCode.ARROW_LEFT) {
             this.Car_Move.L = true
-        } else if (key.keyCode == KeyCode.KEY_D || key.keyCode == KeyCode.ARROW_RIGHT) {
+        } else if (event.keyCode == KeyCode.KEY_D || event.keyCode == KeyCode.ARROW_RIGHT) {
             this.Car_Move.R = true
         }
     }
 
-    Key_Up(key) {
-        if (key.keyCode == KeyCode.KEY_A || key.keyCode == KeyCode.ARROW_LEFT) {
+    Key_Up(event: EventKeyboard) {
+        if (event.keyCode == KeyCode.KEY_A || event.keyCode == KeyCode.ARROW_LEFT) {
             this.Car_Move.L = false
-        } else if (key.keyCode == KeyCode.KEY_D || key.keyCode == KeyCode.ARROW_RIGHT) {
+        } else if (event.keyCode == KeyCode.KEY_D || event.keyCode == KeyCode.ARROW_RIGHT) {
             this.Car_Move.R = false
         }
     }
